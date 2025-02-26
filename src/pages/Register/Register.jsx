@@ -67,17 +67,18 @@ const handleSubmit = async (e) => {
                 // Create user entry in the database
                 const userInfo = { name, email};
                 axiosPublic.post('/users', userInfo)
-  .then(res => {
-    console.log(res.data);  // Log the response to see if insertId is returned
-    if (res.data.insertedId) {
-      console.log("User added successfully");
-      toast.success('Successfully registered!');
-    }
-  })
-  .catch(error => {
-    setError("Error adding user to database");
-    console.error(error);
-  });
+                .then(res => {
+                  console.log(res.data);  // Log the response to see if insertId is returned
+                  if (res.data.insertedId) {
+                    console.log("User added successfully");
+                    toast.success('Successfully registered!');
+                    navigate("/tasks");
+                  }
+                })
+                .catch(error => {
+                  setError("Error adding user to database");
+                  console.error(error);
+                });
 
             })
             .catch(err => {
@@ -105,7 +106,7 @@ const handleSubmit = async (e) => {
               <div className="w-full">
                   <form onSubmit={handleSubmit}>
                       <div className="max-w-md space-y-4 mb-2 mx-auto">
-                          <h2 className="text-center text-3xl font-bold text-yellow-500">Register</h2>
+                          <h2 className="text-center text-3xl font-bold text-black">Register</h2>
                           <label className="input input-bordered flex items-center gap-2">
                               <input type="text" name="name" className="grow" placeholder="Username" required />
                           </label>
@@ -118,11 +119,11 @@ const handleSubmit = async (e) => {
                           <label className="input input-bordered flex items-center gap-2">
                               <input type="password" name="password" className="grow" placeholder="Password" required />
                           </label>
-                          <button type="submit" className="btn w-full text-black text-bold text-lg bg-yellow-500">Register</button>
+                          <button type="submit" className="btn w-full text-white text-bold text-lg bg-black">Register</button>
                       </div>
                   </form>
-                  <span className="text-black">Already have an account? </span>
-                  <NavLink to="/login" className="text-base text-yellow-500 font-bold">Login</NavLink>
+                  <span className="">Already have an account? </span>
+                  <NavLink to="/login" className="text-base text-black font-bold">Login</NavLink>
                   {error && <p className="mt-2 text-red-500">{error}</p>}
               </div>
           </div>
