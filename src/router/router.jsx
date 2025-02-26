@@ -5,6 +5,7 @@ import AddTask from "../pages/AddTask/AddTask";
 import Login from "../pages/Login/Login";
 import ManageTask from "../pages/ManageTask/ManageTask";
 import UpdateModal from "../components/Modal/UpdateModal";
+import ProtectedRoute from "./ProtectedRoute";
 
 const router = createBrowserRouter([
     {
@@ -17,19 +18,19 @@ const router = createBrowserRouter([
     },
     {
         path: "/tasks",
-        element: <Tasks></Tasks>,
+        element: <ProtectedRoute><Tasks></Tasks></ProtectedRoute>,
     },
     {
         path: "/add-task",
-        element: <AddTask></AddTask>,
+        element: <ProtectedRoute><AddTask></AddTask></ProtectedRoute>,
     },
     {
       path: "/manage-task",
-      element: <ManageTask></ManageTask>
+      element: <ProtectedRoute><ManageTask></ManageTask></ProtectedRoute>
     },
     {
       path: "/update-task",
-      element: <UpdateModal></UpdateModal>
+      element: <ProtectedRoute><UpdateModal></UpdateModal></ProtectedRoute>
     }
   ]);
 
