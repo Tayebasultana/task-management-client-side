@@ -4,7 +4,7 @@
 This is a **Task Management Application** where users can register, log in, and manage their tasks. Users can add tasks, update task status (To-Do, In Progress, Done), and delete tasks. The application is built using React for the frontend, Express.js for the backend, and MongoDB for the database.
 
 ## Live Links
-- **Project link : ** [Task-Management](https://task-management-e3a55.web.app).
+- **Project link :** [Task-Management](https://task-management-e3a55.web.app).
 - **Frontend (React):** [Live Site](https://your-frontend-url.com)
 - **Backend (Express.js):** [API Documentation](https://your-backend-url.com)
 
