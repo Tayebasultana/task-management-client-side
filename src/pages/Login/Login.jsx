@@ -40,7 +40,7 @@ const Login = () => {
         .then((res) => {
           console.log(res.data);
           if (user) {
-            navigate(`/tasks/${user.email}`); 
+            navigate("/tasks"); 
             toast.success("Successfully logged in!");
           }
         })
