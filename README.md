@@ -1,8 +1,28 @@
-# React + Vite
+# Task Management Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Short Description
+This is a **Task Management Application** where users can register, log in, and manage their tasks. Users can add tasks, update task status (To-Do, In Progress, Done), and delete tasks. The application is built using React for the frontend, Express.js for the backend, and MongoDB for the database.
 
-Currently, two official plugins are available:
+## Live Links
+- **Frontend (React):** [Live Site](https://your-frontend-url.com)
+- **Backend (Express.js):** [API Documentation](https://your-backend-url.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Dependencies
+### Frontend:
+- `react`: ^18.2.0
+- `react-router-dom`: ^6.14.2
+- `axios`: ^1.5.0
+- `sweetalert2`: ^11.7.27
+- `tailwindcss`: ^3.3.3
+
+### Backend:
+- `express`: ^4.18.2
+- `cors`: ^2.8.5
+- `mongodb`: ^5.7.0
+- `dotenv`: ^16.3.1
+
+## Installation Steps
+### Frontend:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/task-management-app.git
